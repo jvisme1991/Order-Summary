@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --clr-primary-pale-blue: hsl(225, 100%, 94%);
+  --clr-primary-bright-blue: hsl(245, 75%, 52%);
+
+  --clr-neutral-pale-blue: hsl(225, 100%, 98%);
+  --clr-neutral-blue: hsl(224, 23%, 55%);
+  --clr-neutral-dark-blue: hsl(223, 47%, 23%);
+
+  --ff-body: "Red Hat Display", sans-serif;
+
+  --fs-body: 1rem;
+
+  --fw-regular: 500;
+  --fw-semi-bold: 700;
+  --fw-bold: 900;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.74);
+  color: var(--clr-neutral-blue);
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+}
+
+.wrapper__narrow {
+  max-width: 350px;
+}
+
+main {
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--clr-primary-pale-blue);
+  display: grid;
+  place-content: center;
+  height: 100svh;
+}
+
+.card {
+  --border-radius: 1rem;
+
+  display: grid;
+  border-radius: var(--border-radius);
+  place-content: center;
+  margin-inline: auto;
+  background: #fff;
+
+  max-width: 450px;
+}
+
+.hero-img img {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.order-summary {
+  margin-top: 2rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.order-summary h1 {
+  color: var(--clr-neutral-dark-blue);
+  font-weight: var(--fw-bold);
+  font-size: 1.7em;
+  margin-bottom: 1rem;
+}
+
+.plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--clr-neutral-pale-blue);
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.inline-flex {
+  display: inline-flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.inline-flex h2 {
+  color: var(--clr-neutral-dark-blue);
+  font-size: 1em;
+  font-weight: var(--fw-semi-bold);
+}
+
+.plan a {
+  font-weight: var(--fw-semi-bold);
+}
+
+.buttons {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+button {
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.button button:hover {
+  opacity: 0.7;
+}
+
+.cancel button:hover {
+  color: var(--clr-neutral-dark-blue);
+}
+
+.plan a:hover {
+  text-decoration-line: none;
+  opacity: 0.7;
+}
+
+.button button {
+  background-color: var(--clr-primary-bright-blue);
+  color: #fff;
+  padding: 1rem 7.5rem;
+  border-radius: var(--border-radius);
+  font-weight: var(--fw-semi-bold);
+  box-shadow: 10px 10px 50px hsla(245, 75%, 52%, 0.521);
+}
+
+.cancel button {
+  background: none;
+  color: var(--clr-neutral-blue);
+  font-weight: var(--fw-semi-bold);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: -10rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 420px) {
+  .card {
+    margin: 0 1rem;
+  }
+  .button button {
+    padding: 1rem 4rem;
+  }
+  .plan {
+    margin: 2rem 1rem;
+  }
+  .wrapper__narrow {
+    max-width: 80%;
+  }
+}
